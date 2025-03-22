@@ -1,0 +1,5 @@
+owner: KraXen72
+repo: crankshaft
+provider: github
+publishAutoUpdate: false
+updaterCacheDirName: crankshaft-updater

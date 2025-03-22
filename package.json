@@ -1,0 +1,49 @@
+{
+	"name": "crankshaft",
+	"version": "1.8.0",
+	"description": "Crankshaft Krunker Client by KraXen72",
+	"main": "./app/main.js",
+	"scripts": {
+		"preinstall": "npx only-allow pnpm",
+		"postinstall": "electron-builder install-app-deps",
+		"build": "node esbuilder.js --build",
+		"start": "node esbuilder.js && electron .",
+		"watch": "node esbuilder.js --watch",
+		"dev": "concurrently --kill-others \"node esbuilder.js --watch\" \"electron .\"",
+		"testbuild": "pnpm run build && electron .",
+		"dist": "pnpm run build && electron-builder",
+		"release": "pnpm run build && electron-builder --publish always",
+		"lint": "eslint .",
+		"changelog-c": "conventional-changelog -i CHANGELOG.md -s -p conventionalcommits -r 0",
+		"changelog-a": "conventional-changelog -i CHANGELOG.md -s -r 1"
+	},
+	"author": "KraXen72",
+	"license": "GPL-3.0",
+	"homepage": "https://github.com/KraXen72/crankshaft",
+	"keywords": [
+		"Krunker"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/KraXen72/crankshaft.git"
+	},
+	"devDependencies": {
+		"concurrently": "^8.2.2",
+		"conventional-changelog-cli": "^4.1.0",
+		"electron-builder": "23.6.0",
+		"electron-nightly": "^12.0.0-nightly.20201116",
+		"esbuild": "^0.20.0",
+		"eslint": "^8.56.0",
+		"eslint-config-airbnb-typescript": "^17.1.0",
+		"eslint-config-raven": "^1.0.3",
+		"eslint-plugin-import": "^2.29.1",
+		"typescript": "^5.3.3"
+	},
+	"dependencies": {
+		"compare-versions": "^6.1.0",
+		"dayjs": "^1.11.10",
+		"discord-rpc": "^4.0.1",
+		"urlpattern-polyfill": "^10.0.0",
+		"userscript-meta": "^1.0.1"
+	}
+}

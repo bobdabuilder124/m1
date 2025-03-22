@@ -1,0 +1,11 @@
+.endAHolder,
+#aHider,
+#adCon,
+#rightABox,
+#aContainer,
+#topRightAdHolder,
+div#aContainer,
+#braveWarning,
+#topRightAdHolder {
+  display: none !important;
+}
