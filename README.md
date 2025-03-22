@@ -1,4 +1,4 @@
-# This is just a fork of crankshaft. All I did was add some flags for more recent versions of electron to revert to old rendering behavior(electron 10.4.7 and below)
+# This is just a fork of crankshaft. 
 
 # crankshaft
   
